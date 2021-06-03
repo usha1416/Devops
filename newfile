@@ -1,0 +1,30 @@
+
+ NETWORKING & CONTENT DELIVERY 
+
+CLASS:1	
+1.VPC(Virtual Private Cloud)-Steps
+
+1.Create a VPC called as TCS-10.1.0.0/16 -6500 IPs, Enable DNS.
+2.Create a SUBNETS for web,app, & db Survers. Enable Auto Assign IPs
+  Web Servers-10.1.1.0/24
+  App Servers-10.1.2.0/24
+  DB Servers-10.1.3.0/24
+  NAT-Network Address Translation
+3.Create an Internetgateway(IGW) and attach it to VPC.
+4.Create a routing table and assign IGW and subnets to it, Dont use default routing table.
+5.Create a Security Group(firewall) and allow it to trafic.
+6.Create a KeyPair-Public Key-Pem file.
+7.Deploy a Instance(VM) and access using putty.
+
+CLASS:2
+2.NAT(Network Address Translation)-Steps
+
+1.Create a new Subnet name it as TCS-NAT-Subnet-10.1.5.0/24
+2.Create a NAT Gateway and Select Subnet-1
+3.Create a new routing table named as TCS-NAT-Table and add NAT subnet to it.
+4.Create route towards NAT Gateway so that all traffic sent by DB server will go to NAT Gateway.
+5.Deploy VM1 in public subnet and DB1 in private subnet.
+6.Try to connect DB1 server using Public ip and it should fail.
+7.Log in to VM1 and from there connect to DB1
+8.ping www.google.com from DB1 and it should work.
+9.Prove the data is going through NAT Gateway.
