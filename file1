@@ -1,0 +1,8 @@
+Hello Team
+Welcome to devops 
+today we are started practing GIT
+To change to the previous directory: -  #cd -
+To change one level back: -  #cd ..
+To change two levels back: -  #cd  ../..
+To move to the home directory: - #cd ~
+added this line too
